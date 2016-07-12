@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:index, :destroy]
 
 	def index
-    @users = User.all
+    @users = User.where.not(user_type: 'admin')
   end
 
 	def new
