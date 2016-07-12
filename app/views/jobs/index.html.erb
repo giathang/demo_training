@@ -1,0 +1,20 @@
+
+<div class="page-header">
+  <h1>Listing Jobs</h1>
+</div>
+
+<%= form_tag jobs_path, method: 'get', id: "books_search", remote: true do %>
+  <p>
+     <%= text_field_tag :search, params[:search] %>
+     <%= submit_tag "Search", :name => nil %>
+   </p>
+ <% end %>
+
+
+<%= link_to 'New Job', new_job_path, class: "btn btn-info" %>
+<br>
+
+<div id="jobs"><%= render 'jobs' %></div>
+
+<br>
+<%= link_to 'New Job', new_job_path, class: "btn btn-info" %>

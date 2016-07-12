@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vietnamworks</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <nav class="nav navbar-inverse ">
+    <div class="container">
+      <div class="navbar-header">
+          <%= link_to "Vietnamworks", root_path, class: "navbar-brand" %>
+      </div>
+      <ul class="nav navbar-nav pull-right">
+      <% if current_user %>
+          <li><%= link_to current_user.email %></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+      <% else %>
+          <li><%= link_to "Log in", login_path %></a></li>
+          <li><%= link_to "Sign up", signup_path %></a></li>
+      <% end %>
+      </ul>
+    </div>
+  </nav>
+   <div class="container">
+    <div class="body">
+    	<div class="row">
+    	<div class="col-md-2"></div>
+    	<div class="col-md-8">
+	      <% flash.each do |key, value| %>
+	        <div class="alert alert-<%= key %>"><%= value %></div>
+	      <% end %>
+				<%= yield %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

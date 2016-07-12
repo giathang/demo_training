@@ -1,0 +1,13 @@
+<div class="page-header">
+	<h1> Job Name: <%= @job.name %> </h1>
+	<h6> Company: <%= @job.company %> </h6>
+</div>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-info' %> |
+<%= link_to 'Back', jobs_path, class: 'btn btn-info' %>

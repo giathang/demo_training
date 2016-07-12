@@ -1,0 +1,13 @@
+
+<div class="page-header">
+  <h1>Listing Jobs</h1>
+</div>
+
+
+<%= form_tag root_path, method: 'get', id: "books_search", remote: true do %>
+  <p>
+     <%= text_field_tag :search, params[:search] %>
+     <%= submit_tag "Search", :name => nil %>
+   </p>
+ <% end %>
+<div id="jobs"><%= render 'jobs' %></div>
