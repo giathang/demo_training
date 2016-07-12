@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_action :require_admin, only: [:index, :destroy]
+
+	def index
+    @users = User.all
+  end
+
 	def new
 		@user = User.new
 	end
@@ -11,7 +17,14 @@ class UsersController < ApplicationController
 		else
 			render :new
 		end
-	end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:info] = 'Destroy success'
+    redirect_to admin_path
+  end
 
 	private
 
