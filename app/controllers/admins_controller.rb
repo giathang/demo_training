@@ -1,4 +1,5 @@
 class AdminsController < ApplicationController
+  before_action :require_admin
   before_action :get_user, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
+  before_action :require_employee
   before_action :get_job, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   def index
     @jobs = Job.all.order('created_at DESC').search(params[:search])

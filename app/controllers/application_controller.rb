@@ -3,5 +3,17 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  def require_employee
+    unless current_user && current_user.employee?
+      flash[:danger] = "You isn't employee!"
+      redirect_to root_path
+    end
+  end
+  def require_admin
+    unless current_user && current_user.admin?
+      flash[:danger] = "You isn't admin!"
+      redirect_to root_path
+    end
+  end
 end
 
