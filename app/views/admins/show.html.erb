@@ -1,0 +1,8 @@
+<%= @user.email %>
+<%= @user.user_type %>
+<%= @user.created_at %>
+<%= @user.updated_at %>
+
+
+<%= link_to 'Edit', edit_admin_path(@user), class: 'btn btn-info' %> |
+<%= link_to 'Back', admins_path, class: 'btn btn-info' %>

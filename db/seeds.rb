@@ -39,7 +39,7 @@ list_jobs = [
 # 	{name: "Gia Thang", email: "thangnguyen@gmail.com", password: '123123', password_confirmation: '123123', user_type: 'employee'},
 # 	{name: "nguyen Thang", email: "thangnguyen1@gmail.com", password: '123123',password_confirmation: '123123', user_type: 'employee'},
 # 	{name: "Gia Thang", email: "thangnguyen2@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'employee'},
-# 	{name: "Gia Thang", email: "admin@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'admin'}
+# 	{name: "Gia Thang", email: "admins@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'admins'}
 # ]
 list_jobs.each do |job|
 	Job.create(job)
