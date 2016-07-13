@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def index
-		@jobs = Job.all.order('created_at DESC').search(params[:search])
+		@jobs = Job.order('created_at DESC').search(params[:search])
 	end
 
 	def show

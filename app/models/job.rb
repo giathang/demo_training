@@ -4,7 +4,7 @@ class Job < ActiveRecord::Base
 	validates :description, presence: true
 	def self.search(search)
 		if search
-			self.where("name LIKE ? OR company LIKE ?", "%#{search}%", "%#{search}%")
+			self.where("name LIKE ? OR company LIKE ? OR address LIKE ? phone LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%","%#{search}%")
 		else
 			self.all
 		end

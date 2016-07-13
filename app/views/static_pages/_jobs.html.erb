@@ -1,28 +1,24 @@
 <table class="table table-hover">
   <thead>
-    <tr>
-      <th>Job</th>
-      <th>Company</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Job</th>
+    <th>Company</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th colspan="5"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @jobs.each do |job| %>
+  <% @jobs.each do |job| %>
       <tr>
-
-        <td>
-        <% unless current_user %>
-        	<%= job.name %>
-        	<% else %>
-        	<%= link_to job.name, static_page_path(job) %>
-        	<% end %>
-        		
-        	</td>
+        <td><%= job.name %></td>
         <td><%= job.company %></td>
+        <td><%= job.address %></td>
+        <td><%= job.phone %></td>
         <td><%= job.description %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>

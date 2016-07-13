@@ -3,7 +3,7 @@ class AdminsController < ApplicationController
   before_action :get_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.all.search(params[:search])
+    @users = User.search(params[:search])
   end
 
   def show
