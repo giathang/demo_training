@@ -1,34 +1,50 @@
-<div class="page-header">
-  <h1>Edit User</h1>
+<div class="form-admin">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="page-header">
+        <h1>Edit User</h1>
+      </div>
+
+
+    <%= form_for(@user,url: admin_path) do |f| %>
+
+          <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+                <ul>
+                  <% @user.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+
+        <div class="form-group">
+          <%= f.label :email %> <br>
+          <%= f.text_field :email %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %><br>
+          <%= f.password_field :password %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :user_type %><br>
+          <%= f.radio_button :user_type, 'member', checked: true %>
+          <%= f.label :user_type_member, 'Member' %>
+          <%= f.radio_button :user_type, 'employee' %>
+          <%= f.label :user_type_employee, 'Employee' %>
+          <%= f.radio_button :user_type, 'admin' %>
+          <%= f.label :user_type_admin, 'Admin' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit %>
+        </div>
+
+    <% end %>
+    </div>
+  </div>
 </div>
-
-<%= form_for(@user,url: admin_path) do |f| %>
-
-    <div class="form-group">
-      <%= f.label :email %> <br>
-      <%= f.text_field :email %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :user_type %><br>
-
-      <%= f.radio_button :user_type, 'member', checked: true %>
-      <%= f.label :user_type_member, 'Member' %><br>
-
-      <%= f.radio_button :user_type, 'employee' %>
-      <%= f.label :user_type_employee, 'Employee' %><br>
-
-      <%= f.radio_button :user_type, 'admin' %>
-      <%= f.label :user_type_admin, 'Admin' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.submit %>
-    </div>
-
-<% end %>

@@ -30,3 +30,22 @@
 #error_explanation{
   color: red;
 }
+
+.form-admin{
+  input[type="text"],input[type="password"], textarea, select {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+  }
+  input {
+    height: auto !important;
+  }
+  input[type='radio']{
+    border: 1px solid #bbb;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    @include box_sizing;
+  }
+
+}
