@@ -35,16 +35,16 @@ list_jobs = [
 •	2+ years experience architecting complex software systems
 "}
 ]
-list_employee = [
-	{name: "Gia Thang", email: "thangnguyen@gmail.com", password: '123123', password_confirmation: '123123', user_type: 'employee'},
-	{name: "nguyen Thang", email: "thangnguyen1@gmail.com", password: '123123',password_confirmation: '123123', user_type: 'employee'},
-	{name: "Gia Thang", email: "thangnguyen2@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'employee'},
-	{name: "Gia Thang", email: "admin@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'admin'}
-]
+# list_employee = [
+# 	{name: "Gia Thang", email: "thangnguyen@gmail.com", password: '123123', password_confirmation: '123123', user_type: 'employee'},
+# 	{name: "nguyen Thang", email: "thangnguyen1@gmail.com", password: '123123',password_confirmation: '123123', user_type: 'employee'},
+# 	{name: "Gia Thang", email: "thangnguyen2@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'employee'},
+# 	{name: "Gia Thang", email: "admin@gmail.com", password: '123123', password_confirmation: '123123',user_type: 'admin'}
+# ]
 list_jobs.each do |job|
 	Job.create(job)
 end
-
-list_employee.each do |employee|
-	User.create(employee)
-end
+#
+# list_employee.each do |employee|
+# 	User.create(employee)
+# end
