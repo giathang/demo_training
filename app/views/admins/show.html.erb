@@ -1,8 +1,9 @@
-<%= @user.email %>
-<%= @user.user_type %>
-<%= @user.created_at %>
-<%= @user.updated_at %>
+<div class="page-header">
+  <h3>Email: <%= @user.email%></h3>
+  <h3>User type: <%= @user.user_type %></h3>
+  <h3>Created at: <%= @user.created_at %> </h3>
+  <h3>Update at: <%= @user.updated_at %></h3>
+</div>
 
-
-<%= link_to 'Edit', edit_admin_path(@user), class: 'btn btn-info' %> |
-<%= link_to 'Back', admins_path, class: 'btn btn-info' %>
+<%= link_to 'Back', admins_path, class: 'btn btn-info'%> |
+<%= link_to 'Edit', edit_admin_path(@user), class: 'btn btn-info'%>
