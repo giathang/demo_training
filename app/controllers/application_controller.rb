@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def require_employee
-    unless current_user && current_user.employee?
+    unless current_user && current_user.employee? || current_user.admin?
       flash[:danger] = "You isn't employee!"
       redirect_to root_path
     end

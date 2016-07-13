@@ -12,6 +12,14 @@
       <div class="navbar-header">
           <%= link_to "Vietnamworks", root_path, class: "navbar-brand" %>
       </div>
+      <ul class="nav navbar-nav pull-left">
+        <% if current_user && current_user.admin? %>
+          <li><%= link_to 'Admin page', admins_path %></li>
+          <li><%= link_to 'Jobs page', jobs_path %></li>
+        <% elsif current_user && current_user.employee?%>
+          <li><%= link_to 'Jobs page', jobs_path %></li>
+        <% end %>
+      </ul>
       <ul class="nav navbar-nav pull-right">
       <% if current_user %>
           <li><%= link_to current_user.email %></li>
