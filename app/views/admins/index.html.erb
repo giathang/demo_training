@@ -3,29 +3,14 @@
 </div>
 <%= link_to 'New User', new_admin_path, class: 'btn btn-primary' %>
 <br>
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>Email</th>
-    <th>Created At</th>
-    <th>Updated At</th>
-    <th>User Type</th>
-    <th colspan="5"></th>
-  </tr>
-  </thead>
 
-  <tbody>
-  <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.created_at %></td>
-        <td><%= user.updated_at %></td>
-        <td><%= user.user_type %></td>
+<br>
+<%= form_tag admins_path, method: :get, id: "admins_search", remote: true do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", email: nil %>
+  </p>
+<% end %>
 
-        <td><%= link_to 'Show', admin_path(user), class: "btn btn-info" %></td>
-        <td><%= link_to 'Edit', edit_admin_path(user), class: "btn btn-default" %></td>
-        <td><%= link_to 'Delete', admin_path(user), method: :delete, data: {confirm: "Do you want delete this member"},class: 'btn btn-danger'%></td>
-      </tr>
-  <% end %>
-  </tbody>
-</table>
+
+<div id="users"><%= render 'users' %></div>

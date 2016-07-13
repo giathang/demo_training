@@ -11,4 +11,12 @@ class User < ActiveRecord::Base
   def admin?
     self.user_type == 'admin'
   end
+
+  def self.search(search)
+    if search
+      self.where('email LIKE ? OR user_type LIKE ?', "%#{search}%","%#{search}%")
+    else
+      self.all
+    end
+  end
 end
