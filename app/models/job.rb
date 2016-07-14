@@ -9,4 +9,7 @@ class Job < ActiveRecord::Base
 			self.all
 		end
 	end
+
+	geocoded_by :address
+	after_validation :geocode
 end

@@ -10,6 +10,7 @@
   <%= @job.description %>
 </p>
 
-
 <%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-info' %> |
 <%= link_to 'Back', jobs_path, class: 'btn btn-info' %>
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@job.latitude},#{@job.longitude}&markers=#{@job.latitude},#{@job.longitude}&zoom=16&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8"%>

@@ -9,3 +9,5 @@
   <strong>Description:</strong>
   <%= @job.description %>
 </p>
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@job.latitude},#{@job.longitude}&markers=#{@job.latitude},#{@job.longitude}&zoom=16&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8"%>

@@ -1,27 +1,27 @@
 list_jobs = [
-	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
-", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
-		{name: "Senior Full Stack Web Developer", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
+		{name: "Senior Full Stack Web Developer", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
 "},
-	{name: "Senior Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+	{name: "Senior Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
-"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
-"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
-"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb', phone: '0234523452'},
+"},	{name: "Ruby On Rails", company: "HDWEBSOFT", description: "VietnamWorks.com is the #1 job board in Vietnam, now serving millions of unique visitors a month. This is a great opportunity to join a successful product team that is building one of the largest online services in Vietnam.", address: '12200 hiep nhat p4 q.tb ho chi minh', phone: '0234523452'},
 	{name: "PHP", company: "GumiVietNam", description: "•	2+ years experience with PHP and SQL (including Symfony)
 •	2+ years experience with HTML/CSS/Javascript and modern JS application stacks
 •	2+ years experience architecting complex software systems
