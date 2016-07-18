@@ -6,7 +6,8 @@ class Job < ActiveRecord::Base
 
 	def self.search(search)
 		if search
-			self.where("name LIKE ? OR company LIKE ? OR address LIKE ? OR phone LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%","%#{search}%")
+			self.where("name LIKE ? OR company LIKE ? OR address LIKE ? OR phone LIKE ? OR category LIKE ?",
+								 "%#{search}%", "%#{search}%", "%#{search}%","%#{search}%","%#{search}%")
 		else
 			self.all
 		end
