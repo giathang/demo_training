@@ -26,10 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'jquery-rails'
-gem 'devise', '~> 4.2'
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 4.2'
+gem 'omniauth-facebook'
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
