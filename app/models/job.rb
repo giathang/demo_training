@@ -3,7 +3,6 @@ class Job < ActiveRecord::Base
 	validates :name, presence: true
 	validates :description, presence: true
 	has_many :comments, dependent: :destroy
-
 	def self.search(search)
 		if search
 			self.where("name LIKE ? OR company LIKE ? OR address LIKE ? OR phone LIKE ? OR category LIKE ?",

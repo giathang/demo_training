@@ -32,7 +32,6 @@ class User < ActiveRecord::Base
   end
 
 
-
   def employee?
     self.user_type == 'employee'
   end
