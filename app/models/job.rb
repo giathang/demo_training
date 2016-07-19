@@ -5,6 +5,7 @@ class Job < ActiveRecord::Base
 
 	has_many :comments, dependent: :destroy
 	belongs_to :category
+	has_many :applies
 
 	def self.search(search)
 		if search
