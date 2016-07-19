@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719064711) do
+ActiveRecord::Schema.define(version: 20160719084018) do
+
+  create_table "applies", force: :cascade do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "employer",   limit: 255
+    t.integer  "job_id",     limit: 4
+  end
+
+  add_index "applies", ["job_id"], name: "index_applies_on_job_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -64,5 +73,6 @@ ActiveRecord::Schema.define(version: 20160719064711) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "applies", "jobs"
   add_foreign_key "jobs", "categories"
 end
