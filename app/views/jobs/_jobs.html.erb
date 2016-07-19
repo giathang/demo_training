@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Job</th>
+      <th>Category</th>
       <th>Company</th>
       <th>Address</th>
       <th>Phone</th>
@@ -14,6 +15,13 @@
     <% @jobs.each do |job| %>
       <tr>
         <td><%= job.name %></td>
+        <td>
+        <% if job.category %>
+          <%= job.category.name %>
+        <% else %>
+          null
+        <% end %>
+        </td>
         <td><%= job.company %></td>
         <td><%= job.address %></td>
         <td><%= job.phone %></td>

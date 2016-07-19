@@ -31,6 +31,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise', '~> 4.2'
 gem 'omniauth-facebook'
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
+gem "jquery-ui-rails"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
