@@ -1,0 +1,24 @@
+<h2>Comments</h2>
+
+<% @job.comments.each do |comment| %>
+    <div class="panel panel-default" style="width: 50%">
+      <div class="panel-heading">
+        <i class="panel-title"><%= comment.commenter %></i> <br>
+        <i><%= comment.created_at %></i>
+      </div>
+      <div class="panel-body">
+        <p><%= comment.content %></p>
+      </div>
+    </div>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for ([@job, @job.comments.build]) do |f| %>
+    <div class="form-group">
+      <%= f.label :content %><br>
+      <%= f.text_area :content %>
+    </div>
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+<% end %>

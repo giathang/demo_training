@@ -3,37 +3,22 @@
   <h6> Company: <%= @job.company %> </h6>
   <h6> Address: <%= @job.address %> </h6>
   <h6> Phone: <%= @job.phone %> </h6>
-  <button class = "btn btn-info" id = "apply-button">Apply</button>
+  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Apply
+  </button>
+  <%= render 'form_apply'%>
 </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
+<div class="container">
+  <div class="row">
+    <p>
+      <strong>Description:</strong>
+      <%= @job.description %>
+    </p>
 
-<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@job.latitude},#{@job.longitude}&markers=#{@job.latitude},#{@job.longitude}&zoom=16&size=240x200&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8"%>
+    <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@job.latitude},#{@job.longitude}&markers=#{@job.latitude},#{@job.longitude}&zoom=16&size=240x200&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8"%>
 
-<h2>Comments</h2>
+    <%= render 'comment' %>
+  </div>
+</div>
 
-<% @job.comments.each do |comment| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <i class="panel-title"><%= comment.commenter %></i> <br>
-        <i><%= comment.created_at %></i>
-      </div>
-      <div class="panel-body">
-        <p><%= comment.content %></p>
-      </div>
-    </div>
-<% end %>
-
-<h2>Add a comment:</h2>
-<%= form_for ([@job, @job.comments.build]) do |f| %>
-    <div class="form-group">
-      <%= f.label :content %><br>
-      <%= f.text_area :content %>
-    </div>
-    <div class="form-group">
-      <%= f.submit %>
-    </div>
-<% end %>

@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719084018) do
+ActiveRecord::Schema.define(version: 20160719085838) do
 
   create_table "applies", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "employer",   limit: 255
-    t.integer  "job_id",     limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "employer",        limit: 255
+    t.integer  "job_id",          limit: 4
+    t.string   "phone_number",    limit: 255
+    t.string   "address",         limit: 255
+    t.string   "current_company", limit: 255
+    t.string   "current_job",     limit: 255
   end
 
   add_index "applies", ["job_id"], name: "index_applies_on_job_id", using: :btree
