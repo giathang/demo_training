@@ -14,6 +14,6 @@ class AppliesController < ApplicationController
   private
 
   def apply_params
-    params.require(:apply).permit(:phone_number, :address, :current_company, :current_job).merge(employer: current_user.email)
+    params.require(:apply).permit(:phone_number, :address, :current_company, :current_job,:attachment).merge(employer: current_user.email)
   end
 end

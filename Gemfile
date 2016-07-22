@@ -32,6 +32,7 @@ gem 'devise', '~> 4.2'
 gem 'omniauth-facebook'
 gem 'geocoder', '~> 1.3', '>= 1.3.7'
 gem "jquery-ui-rails"
+gem 'carrierwave', '~> 0.11.2'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

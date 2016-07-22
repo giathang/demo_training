@@ -2,7 +2,3 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-jQuery ->
-  $('#job_category_name').autocomplete
-    source: $('#job_category_name').data('autocomplete_source')
