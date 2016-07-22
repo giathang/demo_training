@@ -14,4 +14,4 @@
 app/views/categories/
 app/views/comments/
 app/views/omniauth_callbacks/
-.idea
+.idea/*

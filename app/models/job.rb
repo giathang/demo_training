@@ -4,6 +4,8 @@ class Job < ActiveRecord::Base
 	validates :description, presence: true
 	has_many :comments, dependent: :destroy
 	has_many :applies
+	has_many :categoryships
+	has_many :categories, through: :categoryships
 
 	def self.search(search)
 		if search
